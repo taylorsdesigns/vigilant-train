@@ -30,10 +30,16 @@ export default {
             const endpoint = `${url}?zip=${zipCode}&appid=${apiKey}&units=${units}`;
 
             // make api call
-            const response = axios.get(endpoint);
+            //const response = axios.get(endpoint);
+            
+            axios.get(endpoint).then((response) => {
+                 this.currentTemp = response.data.main.temp;
+            }, (error) => {
+                console.log(error);
+                });
 
             // display current temp on page
-            this.currentTemp = response.data.main.temp;
+            //this.currentTemp = response.data.main.temp;
         },
     },
 };

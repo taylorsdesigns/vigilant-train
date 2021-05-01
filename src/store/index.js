@@ -4,7 +4,17 @@ import Vuex from 'vuex';
 Vue.use(Vuex);
 
 export default new Vuex.Store({
-    state: {},
-    mutations: {},
+    state: {
+        name: '',
+        phone: ''
+    },
+    mutations: {
+        insertName (state, payload) {
+            state.name = payload
+        },
+        insertPhone (state, payload) {
+            state.phone = payload
+        }
+    },
     actions: {},
 });

@@ -2,18 +2,21 @@
     <div id="app">
         <WeatherBanner />
         <ChapmanCares />
+        <ShiftCareer />
     </div>
 </template>
 
 <script>
 import WeatherBanner from '@/components/weather-banner';
 import ChapmanCares from '@/components/chapman-cares';
+import ShiftCareer from '@/components/shift-career';
 
 export default {
     name: 'App',
     components: {
         WeatherBanner,
         ChapmanCares,
+        ShiftCareer,
     },
 };
 </script>
